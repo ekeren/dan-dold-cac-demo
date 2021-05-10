@@ -1,4 +1,22 @@
 # This file was edited by Cloudbees Feature Management
 type: experiment
 flag: myFirstFlag
-value: true
+conditions:
+  - version:
+      operator: semver-gte
+      semver: '1.2'
+    group:
+      name: all Cloudbees employees
+    value: true
+  - version:
+      operator: semver-eq
+      semver: '3123'
+    property:
+      name: email
+      operator: in-array
+      operand:
+        - ddold@cloudbess.com
+    value: true
+value:
+  - percentage: 50
+    option: true
