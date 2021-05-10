@@ -1,4 +1,6 @@
 # This file was edited by Cloudbees Feature Management
 type: experiment
 flag: myFirstFlag
-value: false
+value:
+  - percentage: 50
+    option: true
